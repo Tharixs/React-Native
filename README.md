@@ -17,5 +17,5 @@ npm install
 npx expo start
 
 Kode di atas akan menghasilkan tampilan seperti ini:
-![App](./App.png)
+![App](./app.png)
  
