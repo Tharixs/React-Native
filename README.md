@@ -5,7 +5,7 @@ Aplikasi sederhana untuk menampilkan list data postingan
 Instruksi untuk menginstal dan menjalankan proyek di lingkungan pengembangan lokal.
 
 # Clone repositori
-git clone https://github.com/username/nama-proyek.git
+git clone https://github.com/Tharixs/React-Native.git
 
 # Masuk ke direktori proyek
 cd nama-proyek
