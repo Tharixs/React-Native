@@ -14,7 +14,7 @@ cd nama-proyek
 npm install
 
 # Jalankan proyek
-npx expo start
+npx expo start / npm start
 
 Kode di atas akan menghasilkan tampilan seperti ini:
 ![App](./app.png)
