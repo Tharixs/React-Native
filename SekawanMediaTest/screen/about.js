@@ -1,36 +1,31 @@
-import {
-  View,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  Linking,
-} from "react-native";
+import { View, Text, TouchableOpacity, Linking } from "react-native";
 import { Image } from "expo-image";
 import { Ionicons } from "@expo/vector-icons";
+import { aboutStyle } from "../style/aboutStyle";
 
 export default About = () => {
   return (
-    <View style={styles.container}>
-      <View style={styles.bacground}>
+    <View style={aboutStyle.container}>
+      <View style={aboutStyle.bacground}>
         <Image
-          style={styles.backgroundImage}
+          style={aboutStyle.backgroundImage}
           source="https://images.unsplash.com/photo-1527769929977-c341ee9f2033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
           placeholder={"foto"}
           contentFit="cover"
           transition={1000}
         />
       </View>
-      <View style={styles.profile}>
+      <View style={aboutStyle.profile}>
         <Image
-          style={styles.imageProfile}
+          style={aboutStyle.imageProfile}
           source="https://media.licdn.com/dms/image/D5603AQExCQ18MEhlzw/profile-displayphoto-shrink_800_800/0/1690460787568?e=1697068800&v=beta&t=1wvldFHUxwE67fO5dSc48DEX9vd3jXpI9qGrXiHPvnY"
           placeholder={"foto"}
           contentFit="cover"
           transition={1000}
         />
       </View>
-      <View style={styles.body}>
-        <View style={styles.connect}>
+      <View style={aboutStyle.body}>
+        <View style={aboutStyle.connect}>
           <TouchableOpacity
             onPress={() =>
               Linking.openURL("https://www.instagram.com/tharixs_/")
@@ -59,10 +54,10 @@ export default About = () => {
             <Ionicons name="logo-whatsapp" size={18} color="#333" />
           </TouchableOpacity>
         </View>
-        <Text style={styles.nameText}>Tharixs Akbar Ibnu Azis</Text>
-        <Text style={styles.roleText}>Mobile Developer</Text>
-        <Text style={styles.summary}>Summary</Text>
-        <Text style={styles.summarText}>
+        <Text style={aboutStyle.nameText}>Tharixs Akbar Ibnu Azis</Text>
+        <Text style={aboutStyle.roleText}>Mobile Developer</Text>
+        <Text style={aboutStyle.summary}>Summary</Text>
+        <Text style={aboutStyle.summarText}>
           As an undergraduate student of Informatics Engineering Study Program
           at Politeknik Negeri Jember, I have special expertise in Android
           application development using Kotlin programming language and in web
@@ -85,83 +80,3 @@ export default About = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    backgroundColor: "#fff",
-  },
-
-  header: {
-    height: "25%",
-    width: "100%",
-  },
-
-  bacground: {
-    height: "25%",
-    width: "100%",
-  },
-
-  backgroundImage: {
-    flex: 1,
-    width: "100%",
-    borderRadius: 6,
-  },
-
-  profile: {
-    position: "absolute",
-    top: "18%",
-    height: 100,
-    width: "100%",
-    alignItems: "center",
-  },
-
-  imageProfile: {
-    flex: 1,
-    width: 100,
-    backgroundColor: "#0553",
-    borderRadius: 100,
-  },
-
-  body: {
-    flex: 1,
-    padding: 20,
-    marginTop: 30,
-  },
-
-  connect: {
-    textAlign: "center",
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: 10,
-    marginTop: 10,
-  },
-
-  nameText: {
-    fontFamily: "Poppins-SemiBold",
-    fontSize: 18,
-    textAlign: "center",
-    color: "#333",
-  },
-  roleText: {
-    fontFamily: "Poppins-Medium",
-    fontSize: 12,
-    textAlign: "center",
-    color: "#333",
-  },
-
-  summary: {
-    fontFamily: "Poppins-Medium",
-    fontSize: 14,
-    color: "#333",
-    marginTop: 15,
-  },
-
-  summarText: {
-    fontFamily: "Poppins-Light",
-    fontSize: 12,
-    color: "#333",
-    textAlign: "justify",
-  },
-});
